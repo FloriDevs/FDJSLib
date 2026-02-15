@@ -4,7 +4,7 @@ Wellcome to
 How to use ?
 - Add FDSJSLib (without a download) to your HTML Site (recommended):
         
-        <script  src="https://floridevs.github.io/FDJSLib/FDJSLib.js"></script>
+        <script src="https://floridevs.github.io/FDJSLib/FDJSLib.js"></script>
 
 
 
@@ -16,6 +16,6 @@ How to use ?
     wget https://floridevs.github.io/FDJSLib/FDJSLib.js
 2. Add FDSJSLib (local) to your HTML
 
-        <script  src=FDJSLib.js"></script>
+        <script src="FDJSLib.js"></script>
        
        
