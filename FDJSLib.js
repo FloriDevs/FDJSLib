@@ -191,3 +191,13 @@ function getWeather(elementId, city) {
             el.textContent = 'Wetterdaten konnten nicht geladen werden.';
         });
 }
+function stopRole() {
+    // Entfernt die Drehung und die Animation
+    document.body.style.transform = "rotate(0deg)";
+    document.body.style.transition = "none";
+    
+    // Löscht das Intervall, das die Drehung verursacht hat
+    if (typeof rotationInterval !== 'undefined') {
+        clearInterval(rotationInterval);
+    }
+}
