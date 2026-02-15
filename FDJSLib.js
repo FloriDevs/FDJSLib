@@ -201,3 +201,17 @@ function stopRole() {
         clearInterval(rotationInterval);
     }
 }
+function playloop(url) {
+    // Erstellt ein neues Audio-Objekt
+    const audio = new Audio(url);
+
+    // Setzt die Eigenschaft 'loop' auf true, 
+    // damit es automatisch wieder von vorne beginnt
+    audio.loop = true;
+
+    // Spielt den Sound ab
+    audio.play().catch(error => {
+        console.error("Autoplay wurde vom Browser blockiert:", error);
+    });
+}
+
