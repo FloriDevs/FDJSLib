@@ -1,4 +1,4 @@
-Version = 25.418984
+Version = 26.000001
 
 
 /**
@@ -66,7 +66,18 @@ function fdsver(){
     console.log("version: ", Version);
     console.log("all rights for the Library are at https://www.github.com/FloriDevs/")
 }
+function role(){
+    (function() {
+    document.body.style.transition = "transform 2s linear";
+    document.body.style.transformOrigin = "center";
 
+    setInterval(() => {
+        const currentRotation = (parseInt(document.body.dataset.rotation) || 0) + 360;
+        document.body.dataset.rotation = currentRotation;
+        document.body.style.transform = `rotate(${currentRotation}deg)`;
+    }, 2000);
+})();
+}
 
 
 
