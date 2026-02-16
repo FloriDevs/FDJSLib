@@ -215,3 +215,49 @@ function playloop(url) {
     });
 }
 
+//music service opener
+const streamerLinks = {
+    spotify: "https://open.spotify.com",
+    youtube: "https://music.youtube.com",
+    soundcloud: "https://soundcloud.com"
+};
+
+function openMusicStreamer() {
+    // 1. Prüfen, ob bereits eine Auswahl im Cookie gespeichert ist
+    const savedStreamer = getCookie("preferred_streamer");
+
+    if (savedStreamer && streamerLinks[savedStreamer]) {
+        // Falls gespeichert, direkt öffnen
+        window.open(streamerLinks[savedStreamer], "_blank");
+    } else {
+        // 2. Falls nicht, Auswahl-Menü anzeigen (einfaches Beispiel via prompt)
+        const choice = prompt("Wähle deinen Streamer: spotify, youtube oder soundcloud").toLowerCase();
+
+        if (streamerLinks[choice]) {
+            // Auswahl für 30 Tage speichern
+            setCookie("preferred_streamer", choice, 30);
+            window.open(streamerLinks[choice], "_blank");
+        } else {
+            alert("Ungültige Auswahl!");
+        }
+    }
+}
+
+// Hilfsfunktion: Cookie setzen
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Hilfsfunktion: Cookie auslesen
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
