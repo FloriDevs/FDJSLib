@@ -5,7 +5,7 @@ let witze = [
     "Der Unterschied zwischen Genialität und Dummheit ist, <br> dass die Genialität ihre Grenzen hat.",
     "Nur weil du in den Zug kotzt... <br> ...bist du noch lange nicht... <br> <h1>BAHNBRECHEND</h1>",
     "Einstein hatte recht, Zeit ist relativ. <br> Die Dauer einer Minute hängt im Wesentlichen davon ab, <br> ob man sich vor oder hinter einer geschlossenen Klotür befindet.",
-    '<img src="https://github.com/FloriDevs/FDJSLib/blob/main/einsteinert.png?raw=true" alt="einstein" style="max-width:200px; display:block; margin:10px 0;">'
+    '<img src="https://github.com/FloriDevs/FDJSLib/blob/main/einsteinert.png?raw=true" alt="einstein" style="width:800px; display:block; margin:10px 0;">'
 ];
 
 // In diesem Array merken wir uns, welche Index-Nummern noch übrig sind
